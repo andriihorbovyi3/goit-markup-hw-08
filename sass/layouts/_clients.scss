@@ -1,0 +1,56 @@
+/**
+  |============================
+  | Clients
+  |============================
+*/
+.сlients {
+	@include section;
+}
+.clients__header {
+	@include fonts(700, 36px, 42px, null);
+	text-align: center;
+
+	margin-bottom: 50px;
+
+	color: #212121;
+}
+.clients__list {
+	@extend %list;
+
+	display: flex;
+	gap: 30px;
+}
+.clients__item {
+	width: 170px;
+	height: 92px;
+
+	border: 1px solid #afb1b8;
+	border-radius: 4px;
+
+	transition: border-color 250ms var(--main-transition);
+
+	&:hover,
+	&:focus {
+		border-color: var(--main-accent);
+	}
+}
+
+.clients__link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+
+	background-color: transparent;
+}
+.clients__icon {
+	fill: #afb1b8;
+
+	transition: fill 250ms var(--main-transition);
+
+	.clients__link:hover &,
+	.clients__link:focus & {
+		fill: var(--main-accent);
+	}
+}

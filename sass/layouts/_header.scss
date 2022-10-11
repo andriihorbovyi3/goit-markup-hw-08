@@ -1,0 +1,65 @@
+/**
+  |============================
+  | Header
+  |============================
+*/
+.header {
+	border-bottom: 1px solid #ececec;
+}
+.header__container {
+	display: flex;
+	align-items: center;
+}
+.header__link {
+	@extend %link;
+
+	display: inline-block;
+	padding-top: 32px;
+	padding-bottom: 32px;
+
+	@include fonts(500, 14px, 16px, 0.02em);
+
+	transition: color 250ms var(--main-transition);
+
+	&:focus,
+	&:hover {
+		color: var(--main-accent);
+	}
+}
+
+.header-contact__group {
+	@extend %list;
+
+	display: flex;
+	align-items: center;
+}
+.header-contact__item {
+}
+.header-contact__mail {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	color: var(--main-light);
+
+	margin-right: 50px;
+}
+.header-contact__tel {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	color: var(--main-light);
+}
+.header-contact__icon {
+	fill: #757575;
+
+	transition: fill 250ms var(--main-transition);
+
+	.header-contact__mail:hover &,
+	.header-contact__mail:focus &,
+	.header-contact__tel:hover &,
+	.header-contact__tel:focus & {
+		fill: #2196f3;
+	}
+}

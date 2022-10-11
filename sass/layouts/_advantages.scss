@@ -1,0 +1,41 @@
+/**
+  |============================
+  | Advantages
+  |============================
+*/
+.advantages {
+	@include section;
+}
+.advantages__list {
+	@extend %list;
+
+	display: flex;
+	gap: 30px;
+}
+.advantages__item {
+}
+.advantages__overlay {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 270px;
+	height: 120px;
+
+	margin-bottom: 30px;
+
+	background-color: var(--btn-light);
+}
+.advantages__title {
+	@include fonts(700, 14px, 16px, null);
+
+	text-transform: uppercase;
+
+	margin-bottom: 10px;
+}
+.advantages__description {
+	@include fonts(null, 14px, 24px, null);
+
+	width: 270px;
+	color: var(--main-light);
+}

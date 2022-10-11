@@ -1,0 +1,99 @@
+/**
+  |============================
+  | Cards
+  |============================
+*/
+// buttons
+.cards {
+	@include section;
+}
+.btn__list {
+	@extend %list;
+
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	margin-bottom: 50px;
+}
+.btn__item {
+}
+.btn__first {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-right: 25px;
+	padding-left: 25px;
+}
+.btn--current {
+	background-color: var(--main-accent);
+	color: var(--main-white);
+}
+.btn--current:hover,
+.btn--current:focus {
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
+	background-color: #188ce8;
+}
+// Cards
+.cards__link {
+	@extend %link;
+
+	display: block;
+
+	transition: box-shadow 250ms var(--main-transition);
+
+	&:hover,
+	&:focus {
+		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+	}
+}
+
+.cards__thumb {
+	position: relative;
+
+	overflow: hidden;
+}
+.cards__overlay {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+
+	width: 100%;
+	height: 100%;
+
+	transform: translateY(101%);
+
+	background-color: rgba(33, 150, 243, 0.9);
+
+	transition: transform 250ms var(--main-transition);
+
+	.cards__link:hover &,
+	.cards__link:focus & {
+		transform: translateX(0%);
+	}
+}
+
+.cards__text {
+	padding: 63px 24px;
+
+	@include fonts(null, 18px, 28px, null);
+	color: #ffffff;
+}
+
+.cards__text-wrapper {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 24px;
+	padding-left: 24px;
+}
+.cards__title {
+	@include fonts(700, 18px, 36px, 0.06em);
+
+	margin-bottom: 4px;
+
+	color: var(--main-dark);
+}
+.cards__description {
+	@include fonts(null, 16px, 30px, null);
+
+	color: #757575;
+}

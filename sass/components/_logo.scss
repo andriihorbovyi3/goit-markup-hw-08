@@ -1,0 +1,17 @@
+/**
+  |============================
+  | logo
+  |============================
+*/
+.logo {
+	@extend %link;
+	font-family: "Raleway";
+
+	@include fonts(700, 26px, 30px, null);
+
+	&__blue {
+		font-family: var(--secondary-font);
+
+		color: var(--main-accent);
+	}
+}

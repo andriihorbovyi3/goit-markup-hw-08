@@ -1,0 +1,19 @@
+/**
+  |============================
+  | Cards-set
+  |============================
+*/
+.cards-set {
+	@extend %list;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+
+	&__item {
+		width: calc((100% - 60px) / 3);
+
+		border: 1px solid #eeeeee;
+		background: #ffffff;
+	}
+}

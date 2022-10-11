@@ -1,0 +1,40 @@
+/**
+  |============================
+  | Hero
+  |============================
+*/
+.hero {
+	max-width: 1600px;
+	margin-right: auto;
+	margin-left: auto;
+
+	background-color: #2f303a;
+	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+		url(../images/header/header.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	text-align: center;
+
+	padding-top: 200px;
+	padding-bottom: 200px;
+
+	/* outline: 2px solid red; */
+}
+.hero__header {
+	width: 696px;
+	display: inline-block;
+	margin-bottom: 30px;
+
+	@include fonts(900, 44px, 60px, 0.06em);
+	text-align: center;
+	text-transform: uppercase;
+
+	color: var(--main-white);
+}
+.hero__button {
+	display: block;
+	padding: 10px 32px;
+	margin-right: auto;
+	margin-left: auto;
+}

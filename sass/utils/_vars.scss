@@ -1,0 +1,23 @@
+/**
+  |============================
+  | Block 1
+  |============================
+*/
+:root {
+	/* color */
+	--main-dark: #212121;
+	--main-light: #757575;
+	--main-white: #ffffff;
+	--main-white-opacity: rgba(255, 255, 255, 0.6);
+	--main-accent: #2196f3;
+	--btn-light: #f5f4fa;
+	--bg-sol: #2f303a;
+
+	--main-background-color: #e5e5e5;
+	--card-border-color: #eeeeee;
+
+	--main-font: "Roboto", sans-serif;
+	--secondary-font: "Raleway", sans-serif;
+
+	--main-transition: cubic-bezier(0.4, 0, 0.2, 1);
+}

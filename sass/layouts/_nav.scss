@@ -1,0 +1,46 @@
+/**
+  |============================
+  | Nav
+  |============================
+*/
+.nav__container {
+	margin-right: auto;
+	display: flex;
+	align-items: center;
+}
+.nav__logo {
+	margin-right: 93px;
+
+	color: #000;
+}
+.nav__list {
+	@extend %list;
+
+	display: flex;
+	gap: 50px;
+	align-items: center;
+}
+.nav-list__item {
+}
+.nav__link {
+	color: var(--main-dark);
+}
+.nav__link--active {
+	position: relative;
+
+	color: var(--main-accent);
+
+	&::after {
+		content: "";
+
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		width: 100%;
+		height: 4px;
+		border-radius: 2px;
+
+		background-color: var(--main-accent);
+	}
+}
