@@ -19,11 +19,11 @@
 }
 .modal {
 	position: absolute;
-	top: 50%;
+	top: 56%;
 	left: 50%;
 	padding: 40px;
-	width: 528px;
-	height: 581px;
+	width: 100%;
+	max-width: 450px;
 
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
@@ -32,6 +32,15 @@
 	transition: transform 250ms var(--main-transition);
 
 	background-color: var(--main-white);
+
+	@media screen and (min-width: 768px) {
+	}
+	@media screen and (min-width: 768px) {
+		top: 50%;
+
+		max-width: 528px;
+		height: 581px;
+	}
 }
 
 .modal__btn {
@@ -68,8 +77,11 @@
 .form__title {
 	display: block;
 	margin-bottom: 12px;
+	@include fonts(null, 20px, 30px, null);
 
-	@include fonts(null, 20px, 23px, null);
+	@media screen and (min-width: 768px) {
+		@include fonts(null, 20px, 23px, null);
+	}
 
 	text-align: center;
 }
@@ -78,7 +90,10 @@
 .form-field__label {
 	position: relative;
 	display: block;
-	margin-bottom: 10px;
+
+	&:not(:last-child) {
+		margin-bottom: 10px;
+	}
 }
 .form-field__title {
 	display: inline-block;
@@ -135,6 +150,7 @@
 /* form-agreement */
 .form__agreement {
 	display: flex;
+	margin-top: 20px;
 	margin-bottom: 30px;
 	gap: 9px;
 	align-items: center;
@@ -175,10 +191,16 @@
 .form-agreement__description {
 	display: inline-block;
 
+	@include fonts(400, 12px, 24px, null);
+
 	user-select: none;
 
 	line-height: 1.71;
 	color: #757575;
+
+	@media screen and (min-width: 1200px) {
+		@include fonts(400, 14px, 24px, null);
+	}
 }
 .form-agreement__policy {
 	color: var(--main-accent);

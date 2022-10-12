@@ -32,6 +32,15 @@
 
 	display: flex;
 	align-items: center;
+
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+	@media screen and (max-width: 1199px) {
+		flex-direction: column;
+		gap: 10px;
+		align-items: unset;
+	}
 }
 .header-contact__item {
 }
@@ -43,6 +52,11 @@
 	color: var(--main-light);
 
 	margin-right: 50px;
+
+	@media screen and (max-width: 1199px) {
+		padding: 0;
+		margin-right: 0;
+	}
 }
 .header-contact__tel {
 	display: flex;
@@ -50,6 +64,10 @@
 	gap: 10px;
 
 	color: var(--main-light);
+
+	@media screen and (max-width: 1199px) {
+		padding: 0;
+	}
 }
 .header-contact__icon {
 	fill: #757575;

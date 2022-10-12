@@ -4,16 +4,23 @@
   |============================
 */
 .cards-set {
-	@extend %list;
+  @extend %list;
 
-	display: flex;
-	flex-wrap: wrap;
-	gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 
-	&__item {
-		width: calc((100% - 60px) / 3);
+  &__item {
+    width: 100%;
 
-		border: 1px solid #eeeeee;
-		background: #ffffff;
-	}
+    border: 1px solid #eeeeee;
+    background: #ffffff;
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 60px) / 3);
+    }
+  }
 }

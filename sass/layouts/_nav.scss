@@ -12,6 +12,13 @@
 	margin-right: 93px;
 
 	color: #000;
+
+	@media screen and (max-width: 767px) {
+		margin-right: 0;
+	}
+	@media screen and (min-width: 768px) {
+		margin-right: 87px;
+	}
 }
 .nav__list {
 	@extend %list;
@@ -19,6 +26,10 @@
 	display: flex;
 	gap: 50px;
 	align-items: center;
+
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
 }
 .nav-list__item {
 }

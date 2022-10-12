@@ -4,8 +4,12 @@
   |============================
 */
 .work {
-	@include section;
+	@include section(94px);
 	padding-top: 0;
+
+	@media screen and (max-width: 1199px) {
+		display: none;
+	}
 }
 .work__header {
 	@include fonts(700, 36px, 42px, null);

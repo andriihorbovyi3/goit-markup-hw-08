@@ -11,9 +11,22 @@
 	@extend %list;
 
 	display: flex;
-	justify-content: center;
+	flex-wrap: wrap;
 	gap: 8px;
-	margin-bottom: 50px;
+	row-gap: 16px;
+
+	max-width: 331px;
+	margin-bottom: 40px;
+
+	@media screen and (min-width: 768px) {
+		max-width: none;
+		margin-bottom: 30px;
+		justify-content: center;
+		align-items: baseline;
+	}
+	@media screen and (min-width: 1200px) {
+		margin-bottom: 50px;
+	}
 }
 .btn__item {
 }
@@ -49,6 +62,8 @@
 
 .cards__thumb {
 	position: relative;
+
+	background-color: blueviolet;
 
 	overflow: hidden;
 }

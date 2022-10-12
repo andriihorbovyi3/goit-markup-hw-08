@@ -1,0 +1,129 @@
+.menu__button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 40px;
+	height: 40px;
+	padding: 0;
+
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+
+	transition: fill 250ms var(--main-transition);
+	&:hover,
+	&:focus {
+		fill: var(--main-accent);
+	}
+
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+}
+.menu__button--close {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+}
+.menu__container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	height: 100%;
+	padding: 48px 40px 48px 40px;
+
+	background-color: var(--main-white);
+
+	transform: translateX(100%);
+	transition: transform 400ms linear;
+
+	&.is-open {
+		transform: translateX(0);
+	}
+}
+
+.menu__nav {
+	@extend %list;
+
+	margin-bottom: auto;
+}
+.menu-nav__item {
+	&:not(:last-child) {
+		margin-bottom: 32px;
+	}
+}
+.menu-nav__link {
+	@extend %link;
+	display: inline-block;
+
+	@include fonts(500, 40px, 47px, 0.02em);
+
+	color: var(--main-dark);
+
+	transition: color 250ms var(--main-transition);
+	&:hover {
+		color: var(--main-accent);
+	}
+}
+
+.menu-contact__group {
+	@extend %list;
+
+	margin-bottom: 64px;
+}
+.menu-contact__item {
+	&:not(:last-child) {
+		margin-bottom: 32px;
+	}
+}
+.menu-contact__link {
+	@extend %link;
+	@include fonts(500, 24px, 28px, 0.02em);
+
+	color: var(--main-light);
+
+	&:hover {
+		color: var(--main-accent);
+	}
+
+	&--blue {
+		@include fonts(500, 34px, 40px, 0.02em);
+
+		color: var(--main-accent);
+
+		@media screen and (min-width: 321px) {
+			@include fonts(500, 27px, 40px, 0.02em);
+		}
+	}
+}
+.menu-socials__group {
+	@extend %list;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	// gap: 20px;
+}
+.menu-socials__item {
+	padding: 0 10px;
+	border-right: 2px solid #afb1b8;
+	&:first-child {
+		padding-left: 0;
+	}
+	&:last-child {
+		padding-right: 0;
+		border: none;
+	}
+}
+.menu-socials__link {
+	@extend %link;
+
+	@include fonts(500, 18px, 22px, 0.02em);
+
+	color: var(--main-accent);
+}
