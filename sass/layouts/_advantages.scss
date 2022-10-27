@@ -4,14 +4,14 @@
   |============================
 */
 .advantages {
-	@include section;
-
+	@include section(60px);
 	@media screen and(min-width:768px) {
 	}
 	@media screen and(min-width:1200px) {
 		@include section(94px);
 	}
 }
+
 .advantages__list {
 	@extend %list;
 

@@ -3,6 +3,7 @@
 	padding-top: $padding;
 	padding-bottom: $padding;
 }
+
 @mixin fonts($fw: 500, $fs: 16px, $lh: 24px, $ls: 0.02em) {
 	font-weight: $fw;
 	font-size: $fs;
