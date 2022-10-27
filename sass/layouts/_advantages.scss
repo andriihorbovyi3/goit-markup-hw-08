@@ -4,7 +4,8 @@
   |============================
 */
 .advantages {
-	@include section(60px);
+	@include section;
+
 	@media screen and(min-width:768px) {
 	}
 	@media screen and(min-width:1200px) {

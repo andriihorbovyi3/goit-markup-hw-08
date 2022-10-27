@@ -710,8 +710,8 @@ body {
   |============================
 */
 .cards {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .btn__list {
@@ -817,8 +817,8 @@ body {
   |============================
 */
 .footer {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   text-align: center;
   background-color: #2f303a;
 }
